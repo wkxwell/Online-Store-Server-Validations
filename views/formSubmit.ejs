@@ -1,0 +1,147 @@
+<% include _layout/header %>
+
+<%
+// -------------------------------- //
+// -----------Variables ----------- //
+// -------------------------------- //
+
+var deliveryFee = 0;
+var oneDay = 30;
+var twoDay = 25;
+var threeDay = 20;
+var fourDay = 15;
+var technique = 1499;
+var premium = 999;
+var standard = 799;
+var productCost = 0;
+var tax = 0;
+var totalCost = 0;
+var techname= '';
+var premname = '';
+var stanname = '';
+var techQuantity = 0;
+var preQuantity = 0;
+var stanQuantity = 0;
+
+// ------------------------------- //
+// ---------Product Cost---------- //
+// ------------------------------- //
+
+techQuantity = parseInt(tech);
+productCost += techQuantity * technique;
+    if (techQuantity != 0){
+        techname = 'Technique';
+    }
+
+preQuantity = parseInt(prem);
+productCost += preQuantity * premium;
+    if (preQuantity != 0){
+        premname = 'Premium'
+    }
+
+stanQuantity = parseInt(stan);
+productCost += stanQuantity * standard;
+    if (stanQuantity != 0){
+         stanname = 'Standard'
+    }   
+
+// ------------------------------- //
+// ------------Tax Cost----------- //
+// ------------------------------- //
+
+    var provinceTax = province;
+    if (provinceTax == 'Alberta'){
+        tax = productCost * 0.05;
+    }else if (provinceTax == 'British Columbia'){
+        tax = productCost * 0.12;
+    }else if (provinceTax == 'Manitoba'){
+        tax = productCost * 0.13;
+    }else if (provinceTax == 'New Brunswick'){
+        tax = productCost * 0.15;
+    }else if (provinceTax == 'Newfoundland And Labrador'){
+        tax = productCost * 0.15;
+    }else if (provinceTax == 'North West Territories'){
+        tax = productCost * 0.05;
+    }else if (provinceTax == 'NovaScotia'){
+        tax = productCost * 0.15;
+    }else if (provinceTax == 'Nunavut'){
+        tax = productCost * 0.05;
+    }else if (provinceTax == 'Ontario'){
+        tax = productCost * 0.13;
+    }else if (provinceTax == 'Prince Edward Island'){
+        tax = productCost * 0.15;
+    }else if (provinceTax == 'Quebec'){
+        tax = productCost * 0.14975;
+    }else if (provinceTax == 'Saskatchewan'){
+        tax = productCost * 0.11;
+    }else if (provinceTax == 'Yukon'){
+        tax = productCost * 0.05;
+    } tax = Math.round(tax*100)/100;
+
+// ------------------------------- //
+// -------- Delivery Cost--------- //
+// ------------------------------- //
+
+switch (deliveryCost){
+    case (1): deliveryFee = oneDay;
+    break;
+    case (2): deliveryFee = twoDay;
+    break;
+    case (3): deliveryFee = threeDay;
+    break;
+    case (4): deliveryFee = fourDay;
+    break;
+    default: deliveryFee = 0;
+    break;
+}
+
+// ------------------------------- //
+// ---------Total Cost------------ //
+// ------------------------------- //
+
+totalCost = deliveryFee + tax + productCost;
+%>
+
+<section class="section-Info">
+    <div class="row">
+        <h2>Thank you for Submitting Your Order, <%= firstName%> </h2>
+    </div>
+        <div class="summary">
+        <div class="col span-1-of-3">
+        <div class="formResult">
+                <p id="formResult">
+                <span id='titles'>Information</span> 
+                <br> <p id='reviewField'>First Name:</p><%= firstName%> 
+                <br> <p id='reviewField'>Last Name:</p><%= lastName%>
+                <br> <p id='reviewField'>Email :</p><%= email%>
+                <br> <p id='reviewField'>Phone Number:</p><%= phone%>
+                <br> <p id='reviewField'>Shipping Address:</p><%= address%>
+                <br> <p id='reviewField'>City:</p><%= city%>, <%= province%>
+                <br> <p id='reviewField'>Postal Code:</p><%= postalCode%> 
+        </div>
+        </div>
+        <div class="col span-1-of-3">
+        <div class="itemSelected">
+                <p id="itemSelected">
+                <span id='titles'>Product Selected</span>
+                <br> 
+                <%= techname%> <br>         
+                <%= premname%> <br>
+                <%= stanname%> <br><br><br><br><br>
+        </div> 
+        </div>
+        <div class="col span-1-of-3">       
+        <div class="costSummary">
+                <p id="costSummary">
+                <span id='titles'>Cost Breakdown</span>
+                <br> <p id='reviewField'>Subtotal: $</p><%= productCost%>
+                <br> <p id='reviewField'>Tax: $</p><%= tax%> 
+                <br> <p id='reviewField'>Delivery Cost: $</p><%= deliveryFee%>
+                <br> <p id='reviewField'>Total Cost: $</p><%= totalCost%>
+                <br><br><br><br>
+        </div>
+        </div>
+    </div>
+    </section>
+
+<% include _layout/footer %>

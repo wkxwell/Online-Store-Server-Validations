@@ -1,0 +1,185 @@
+ <% include _layout/header %>
+
+ <section class="section-Info">
+            <div class="row">
+                <h2>Become an audi exclusive member <br> <br>2020 audi r8 prototype car models</h2>
+            </div>
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <div class="product-box">
+                        <div>
+                            <h3>Technique Model <br> <span>$1499</span></h3>
+                        </div>
+                            <div>
+                                <ul>
+                                    <li><ion-icon name="checkmark" icon-small></ion-icon> Metalic Finish</li>
+                                    <li><ion-icon name="checkmark" icon-small></ion-icon> 1 : 24 Scale Accurate Design</li>
+                                    <li><ion-icon name="checkmark" icon-small></ion-icon> LED Front/Back Light Equipped</li>
+                                    <li><ion-icon name="checkmark" icon-small></ion-icon> Limited Collection - 10 per customer</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="product-box">
+                        <div>
+                            <h3>Premium Model<br><span>$999</span></h3>
+                            
+                        </div>
+                            <div>
+                                <ul>
+                                    <li> <ion-icon name="checkmark" icon-small></ion-icon> Metalic Finish</li>
+                                    <li> <ion-icon name="checkmark" icon-small></ion-icon>  1:24 Scale Accurate Design</li>
+                                    <li> <ion-icon name="checkmark" icon-small></ion-icon> LED Front Light Equipped</li>
+                                    <li><ion-icon name="checkmark" icon-small></ion-icon> Limited Collection - 10 per customer</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+                <div class="col span-1-of-3">
+                    <div class="product-box">
+
+                        <div>
+                            <h3>Standard Model<br> <span>$799</span></h3>
+                        </div>
+                            <div>
+                                <ul>
+                                    <li> <ion-icon name="checkmark" icon-small></ion-icon> Standard Finish</li>
+                                    <li> <ion-icon name="checkmark" icon-small></ion-icon> 1:24 Scale Accurate Design</li>
+                                    <li> <ion-icon name="close" icon-small></ion-icon> LED Front/Back Light Equipped</li>
+                                    <li><ion-icon name="checkmark" icon-small></ion-icon> Limited Collection - 10 per customer</li>
+                                </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+            <a class="btn btn-next" href="#form">Next Step</a>
+            </div>
+    </section>
+
+    <section class="section-user">
+            <div class="row">
+            <h2>order concept models</h2>
+            </div>
+        <form id="form" name="shopForm" method="POST" action="">   
+            <label>First Name*</label>
+            <input id="firstName" placeholder="Enter your first name" type="text" name="firstName"> 
+            <br>
+            <br>
+            <label>Last Name*</label>
+            <input id="lastName" placeholder="Enter your last name" type="text" name="lastName">
+            <br>
+            <br>
+            <label>Email*</label>
+            <input id="email" placeholder="Enter your email address" name="email">
+            <br>
+            <br>
+            <label>Phone*</label>
+            <input id="phone" placeholder ="e.g. 1234567890" name="phone"> 
+            <br>
+            <br>
+            <label>Address*</label>
+            <input id="address" name="address"> <br>
+            <br>
+            <label>City*</label>
+            <input id="city" placeholder="Enter your city" type="text" name="city"> <br>
+            <br>
+            <label>Postal Code*</label>
+            <input id="postalCode" placeholder="e.g. M4L 2S9" name="postalCode">
+            <br>
+            <br>
+            <label>Province*</label>
+            <select id="province" name="province">
+                 <option value="Alberta">Alberta</option>
+                 <option value="British Columbia">British Columbia</option>
+                 <option value="Manitoba">Manitoba</option>
+                 <option value="New Brunswick">New Brunswick</option>
+                 <option value="Newfoundland And Labrador">Newfoundland and Labrador</option>
+                 <option value="North West Territories">Northwest Territories</option>
+                 <option value="NovaScotia">Nova Scotia</option>
+                 <option value="Nunavut">Nunavut</option>
+                 <option value="Ontario">Ontario</option>
+                 <option value="Prince Edward Island">Prince Edward Island</option>
+                 <option value="Quebec">Quebec</option>
+                 <option value="Saskatchewan">Saskatchewan</option>
+                 <option value="Yukon">Yukon</option>
+            </select>
+            <br>
+            <br>
+            <label>Technical Quantity</label>
+                <select id="tech" name="tech">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            <br>
+            <br>
+            <label>Premium Quantity</label>
+                <select id="prem" name="prem">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            <br>
+            <br>
+            <label>Standard Quantity</label>
+                <select id="stan" name="stan">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            <br>
+            <br>
+            <label>Deliverty Options</label>
+            <select id="deliveryCost" name="deliveryCost">
+                <option value="1">Express - One Day Delivery + $30</option>
+                <option value="2">Advance - Two Day Delivery + $25</option>
+                <option value="3">Premium - Three Day Delivery + $20</option>
+                <option value="4">Standard - Four Day Delivery + $15</option>
+            </select>
+            <br>
+            <br>
+            <button class="btn btn-order" type="submit">Review Order</button>
+            
+<!----------------------ERROR MESSAGE SECTION--------------------->
+            <p id="errors">
+            <%
+                if (typeof errors !== 'undefined'){
+                    for(var error of errors){
+            %>
+                        <%= error.msg %> <br>
+            <%
+                    }
+                }
+            %>  
+            </p>
+<!----------------------ERROR MESSAGE SECTION---------------------> 
+        </form>
+    </section>
+        
+<% include _layout/footer %>       

@@ -1,0 +1,28 @@
+{
+  "name": "onlinestore",
+  "version": "1.0.0",
+  "description": "Assignment 3",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "&"
+  },
+  "repository": {
+    "type": "git",
+    "url": "*"
+  },
+  "keywords": [
+    "*"
+  ],
+  "author": "Jerry",
+  "license": "ISC",
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "ejs": "*",
+    "express-messages": "*",
+    "express-session": "*",
+    "express-validation": "*",
+    "express-validator": "^6.2.0"
+  }
+}
